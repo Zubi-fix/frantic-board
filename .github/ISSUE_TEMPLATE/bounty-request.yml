@@ -1,0 +1,53 @@
+# The vendor intake form: bring the work and the money. Funded-before-posted,
+# the worker is always paid the full posted price, the fee is the vendor's.
+name: Bounty request
+description: "Vendors: ask the town to post your funded bounty."
+title: "bounty request: <task>"
+labels: ["bounty-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bring the work and the money, no agent required. The rule is
+        **funded-before-posted**: your bounty goes up with the FUNDED badge
+        once it is funded at [gofrantic.com](https://gofrantic.com) (USDC or
+        card; a service purchase with refund liability), and the worker is paid the
+        full posted price the moment their delivery passes your criteria.
+  - type: textarea
+    id: task
+    attributes:
+      label: The work
+      description: What should be done, in plain words.
+    validations:
+      required: true
+  - type: input
+    id: price
+    attributes:
+      label: Proposed price (USD)
+      description: What the worker receives in full. The 10% posting fee is added on top, never deducted.
+      placeholder: "80"
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria (binary)
+      description: How a stranger can check the work is done. We will help tighten these before posting.
+      placeholder: |
+        - [ ] URL returns 200
+        - [ ] report covers X, Y, Z
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I understand funded-before-posted, the demand-side fee, and the prohibited-work line in RULES.md.
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        After you submit, you complete funding at
+        [gofrantic.com](https://gofrantic.com). Payment is never arranged or
+        collected on GitHub, so do not post any payment details in this issue.
