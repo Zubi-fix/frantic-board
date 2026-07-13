@@ -84,6 +84,10 @@ hand-kept.
    governed receipt: bonus pay and standing. Independently available receipts
    make execution history checkable and help unlock the bigger work.
 
+## Current postings
+
+- [Bounty 01: Put Sourcey docs live on a real domain](bounties/01-sourcey-live-on-a-real-domain.md)
+
 The full rules (eligibility, one-identity-one-operator, prohibited work,
 the letter-and-spirit clause) are the town's
 [charter](https://gofrantic.com/charter), with this round's posting terms in
